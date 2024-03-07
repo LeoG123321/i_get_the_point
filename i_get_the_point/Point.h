@@ -11,6 +11,6 @@ public:
 	double operator-(Point);	//Distance between 2 points
 	bool operator==(Point);		//Checks if same points
 	bool operator !=(Point);	//Checks if not same points
-	double operator/(Point);	//Finds Midpoint between 2 points
+	Point operator/(Point);	//Finds Midpoint between 2 points
 };
 
