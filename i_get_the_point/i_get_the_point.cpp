@@ -4,6 +4,8 @@
     Week 8              I Get the Point!
 */
 #include <iostream>
+#include <cassert>
+#include "Point.h"
 
 using namespace std;
 
