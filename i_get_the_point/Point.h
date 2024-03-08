@@ -5,7 +5,7 @@ private:
 	double x_coordinate;
 	double y_coordinate;
 public:
-	Point(int, int);	//x coordinate, y coordinate
+	Point(double, double);	//x coordinate, y coordinate
 	double get_x_coordinate();
 	double get_y_coordinate();
 	double operator-(Point);	//Distance between 2 points

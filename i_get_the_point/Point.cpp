@@ -1,7 +1,7 @@
 #include "Point.h"
 #include <math.h>
 
-Point::Point(int x_coordinate, int y_coordinate) {
+Point::Point (double x_coordinate, double y_coordinate) {
 	this->x_coordinate = x_coordinate;
 	this->y_coordinate = y_coordinate;
 }
