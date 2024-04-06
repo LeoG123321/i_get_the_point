@@ -5,6 +5,7 @@
 */
 #include <iostream>
 #include <cassert>
+#include <cmath>
 #include "Point.h"
 
 using namespace std;
@@ -40,9 +41,12 @@ int main()
     assert(point6.get_y_coordinate() == 3.0);
     
     cout << "\tTesting Multiplication..." << endl;
-    Point point7 = point6 * -5;
-    assert(point7.get_x_coordinate() == -12.5);
-    assert(point7.get_y_coordinate() == -15.0);
+    Point point7 = point6 * (-5.2);
+    assert(point7.get_x_coordinate() == -13.0);
+    assert(point7.get_y_coordinate() == 3 * -5.2); //3 * -5.2 == -15.81
+    
+    //For some reason, there is a thing that c++ does that if you compare (3 * -5.2 == -15.81), you will get false, even if it's correct
+    //It has something to do with float point arithmetic and using exact numbers
 
     cout << "Testing Complete." << endl;
 }

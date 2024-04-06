@@ -1,5 +1,6 @@
 #include "Point.h"
 #include <math.h>
+#include <iostream>
 
 Point::Point (double x_coordinate, double y_coordinate) {
 	this->x_coordinate = x_coordinate;
@@ -40,6 +41,8 @@ Point Point::operator/(Point second_point){	//Finds Midpoint between 2 points
 }
 
 Point Point::operator*(double constant) {
-	Point place_holder(x_coordinate * constant, y_coordinate * constant);
+	double x_place_holder = x_coordinate * constant;
+	double y_place_holder = y_coordinate * constant;
+	Point place_holder(x_place_holder, y_place_holder);
 	return place_holder;
 }
