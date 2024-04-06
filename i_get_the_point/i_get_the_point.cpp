@@ -21,12 +21,12 @@ int main()
     cout << "\tTesting Equality..." << endl;
     Point point2(3.5, 4.2);
     Point point3(4.2, 3.5);
-    assert((point1 == point2) == true);
-    assert((point2 == point3) == false);
+    assert(point1 == point2);
+    assert(!(point2 == point3));
 
     cout << "\tTesting Inequality..." << endl;
-    assert((point1 != point3) == true);
-    assert((point1 != point2) == false);
+    assert(point1 != point3);
+    assert(!(point1 != point2));
 
     cout << "\tTesting Distance..." << endl;
     Point point4(1, 1);
@@ -39,6 +39,11 @@ int main()
     assert(point6.get_x_coordinate() == 2.5);
     assert(point6.get_y_coordinate() == 3.0);
     
+    cout << "\tTesting Multiplication..." << endl;
+    Point point7 = point6 * -5;
+    assert(point7.get_x_coordinate() == -12.5);
+    assert(point7.get_y_coordinate() == -15.0);
+
     cout << "Testing Complete." << endl;
 }
 

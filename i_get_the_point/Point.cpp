@@ -38,3 +38,8 @@ Point Point::operator/(Point second_point){	//Finds Midpoint between 2 points
 	Point place_holder(x_place_holder, y_place_holder);
 	return place_holder;
 }
+
+Point Point::operator*(double constant) {
+	Point place_holder(x_coordinate * constant, y_coordinate * constant);
+	return place_holder;
+}

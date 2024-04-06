@@ -12,5 +12,7 @@ public:
 	bool operator==(Point);		//Checks if same points
 	bool operator !=(Point);	//Checks if not same points
 	Point operator/(Point);	//Finds Midpoint between 2 points
+
+	Point operator*(double constant);
 };
 
