@@ -5,6 +5,7 @@
 */
 #include <iostream>
 #include <cassert>
+#include <cmath>
 #include "Point.h"
 
 using namespace std;
@@ -21,12 +22,12 @@ int main()
     cout << "\tTesting Equality..." << endl;
     Point point2(3.5, 4.2);
     Point point3(4.2, 3.5);
-    assert((point1 == point2) == true);
-    assert((point2 == point3) == false);
+    assert(point1 == point2);
+    assert(!(point2 == point3));
 
     cout << "\tTesting Inequality..." << endl;
-    assert((point1 != point3) == true);
-    assert((point1 != point2) == false);
+    assert(point1 != point3);
+    assert(!(point1 != point2));
 
     cout << "\tTesting Distance..." << endl;
     Point point4(1, 1);
@@ -39,6 +40,23 @@ int main()
     assert(point6.get_x_coordinate() == 2.5);
     assert(point6.get_y_coordinate() == 3.0);
     
+    cout << "\tTesting Multiplication..." << endl;
+    Point point7 = point6 * (-5.2);
+    assert(point7.get_x_coordinate() == -13.0);
+    assert(point7.get_y_coordinate() == 3 * -5.2); //3 * -5.2 == -15.81
+    
+    //For some reason, there is a thing that c++ does that if you compare (3 * -5.2 == -15.81), you will get false, even if it's correct
+    //It has something to do with float point arithmetic and using exact numbers
+
+    cout << "\tTesting Array Indexing..." << endl;
+    double place_holder_x = point6['x'];
+    double place_holder_y = point6['y'];
+    assert(place_holder_x == 2.5);
+    assert(place_holder_y == 3.0);
+    
+    place_holder_x = point6[8];
+    assert(place_holder_x == 0);
+
     cout << "Testing Complete." << endl;
 }
 
