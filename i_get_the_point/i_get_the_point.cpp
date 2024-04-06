@@ -48,6 +48,15 @@ int main()
     //For some reason, there is a thing that c++ does that if you compare (3 * -5.2 == -15.81), you will get false, even if it's correct
     //It has something to do with float point arithmetic and using exact numbers
 
+    cout << "\tTesting Array Indexing..." << endl;
+    double place_holder_x = point6['x'];
+    double place_holder_y = point6['y'];
+    assert(place_holder_x == 2.5);
+    assert(place_holder_y == 3.0);
+    
+    place_holder_x = point6[8];
+    assert(place_holder_x == 0);
+
     cout << "Testing Complete." << endl;
 }
 

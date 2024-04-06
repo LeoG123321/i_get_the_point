@@ -46,3 +46,15 @@ Point Point::operator*(double constant) {
 	Point place_holder(x_place_holder, y_place_holder);
 	return place_holder;
 }
+
+double Point::operator[](char coordinate_type) {
+	if (coordinate_type == 'x') {
+		return x_coordinate;
+	}
+	else if (coordinate_type == 'y') {
+		return y_coordinate;
+	}
+	else {
+		return 0;
+	}
+}

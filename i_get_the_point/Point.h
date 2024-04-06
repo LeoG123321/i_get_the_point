@@ -14,5 +14,7 @@ public:
 	Point operator/(Point);	//Finds Midpoint between 2 points
 
 	Point operator*(double constant);
+
+	double operator[](char coordinate_type);
 };
 
